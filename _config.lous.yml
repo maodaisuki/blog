@@ -1,0 +1,31 @@
+favicon: 
+
+menu:
+  主页: /
+  归档: archives
+  关于: about
+  
+copyright:
+  name: mao
+
+license:
+  name: CC-BY-NC-SA 4.0
+  url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+rss:
+  path: atom.xml
+
+mathjax:
+  enable: false
+katex:
+  enable: true
+
+utterances:
+  enable: true
+  repo: imakitto/blog
+  issueTerm: pathname
+  theme: github-light
+
+# analytics:
+#   enable: true
+#   gtag: G-9T06K923BE
