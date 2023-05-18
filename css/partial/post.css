@@ -1,0 +1,119 @@
+.post-details {
+  color: #555;
+  font-size: 15px;
+  width: 100%;
+  margin: 0 10px;
+  inline-height: 1.8em;
+}
+.post-details a:not(.nonstyle) {
+  text-decoration: none;
+  color: #3a97ff;
+  box-shadow: 0 1px 0 #555;
+}
+.post-details a:not(.nonstyle):hover {
+  box-shadow: 0 1px 0 #3a97ff;
+}
+.post-details .post-title {
+  margin-bottom: 10px;
+}
+.post-details .post-title h1 {
+  color: #222;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-block: 0;
+}
+.post-details .post-meta {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #999;
+}
+.post-details .post-content h1,
+.post-details .post-content h2,
+.post-details .post-content h3,
+.post-details .post-content h4,
+.post-details .post-content h5,
+.post-details .post-content h6 {
+  color: #222;
+  margin-block: 0;
+  margin-inline: 0;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  line-height: 1.2em;
+}
+.post-details .post-content h1 {
+  font-size: 1.4em;
+}
+.post-details .post-content h2 {
+  font-size: 1.3em;
+}
+.post-details .post-content h3 {
+  font-size: 1.2em;
+}
+.post-details .post-content h4 {
+  font-size: 1.1em;
+}
+.post-details .post-content h5 {
+  font-size: 1em;
+}
+.post-details .post-content h6 {
+  font-size: 0.9em;
+}
+.post-details .post-content p {
+  margin-block: 0;
+  line-height: 1.8em;
+}
+.post-details .post-content p:not(:last-child) {
+  margin: 0 0 10px;
+}
+.post-details .post-content img {
+  max-width: 100%;
+}
+.post-details .post-content blockquote {
+  margin-block: 0;
+  margin-inline: 0;
+  padding: 3px 10px;
+  background-color: #eee;
+  border-left: 7px solid #999;
+}
+.post-details .post-content blockquote>p {
+  margin: 0 0;
+}
+.post-details .post-content kbd {
+  padding: 1px 3px;
+  background-color: #eee;
+  box-shadow: 1px 2px #999;
+  border-radius: 3px;
+}
+.post-details .post-content mark,
+.post-details .post-content code:not(.hljs) {
+  padding: 1px 3px;
+  background-color: #eee;
+  border-radius: 3px;
+}
+.post-details .post-content table {
+  text-align: left;
+  border-collapse: collapse;
+}
+.post-details .post-content th,
+.post-details .post-content td {
+  padding: 5px;
+  border: 1px solid #eee;
+}
+.post-details .post-content tr:nth-child(even) {
+  background-color: #eee;
+}
+.post-details .post-content th {
+  font-weight: 400;
+  background-color: #ddd;
+}
+.post-details .post-content table {
+  margin: 1em 0;
+  width: 100%;
+}
+.katex > .katex-html {
+  white-space: normal;
+}
+.katex .base {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

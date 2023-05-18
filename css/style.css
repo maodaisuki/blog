@@ -1,0 +1,317 @@
+body {
+  color: #222;
+  font-size: 17px;
+  font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", Verdana, Arial, '微软雅黑', '宋体';
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+.body-container {
+  margin: 0 auto;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+}
+.body-container > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+.header-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.header-menu-list {
+  width: 100%;
+  margin: 0 10px;
+}
+.header-menu-list ul {
+  text-align: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+.header-menu-list li:not(:last-child) {
+  margin-right: 15px;
+}
+@media screen and (max-width: 600px) {
+  .header-menu-list ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-menu-list li:not(:last-child) {
+    margin-right: 0px;
+  }
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+.post-list {
+  width: 100%;
+  margin: 0 10px;
+}
+.post-item {
+  width: 100%;
+  text-align: left;
+}
+.post-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.post-item-date {
+  font-size: 0.9em;
+  color: #555;
+}
+.footer-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.footer-meta {
+  font-size: 11px;
+  color: #999;
+  width: 100%;
+  margin: 0 10px;
+  display: inline-flex;
+}
+.footer-meta a {
+  color: #777;
+}
+.footer-meta a:hover {
+  color: #555;
+}
+.footer-meta > div:not(:last-child) {
+  margin-right: 5px;
+}
+.post-details {
+  color: #555;
+  font-size: 15px;
+  width: 100%;
+  margin: 0 10px;
+  inline-height: 1.8em;
+}
+.post-details a:not(.nonstyle) {
+  text-decoration: none;
+  color: #3a97ff;
+  box-shadow: 0 1px 0 #555;
+}
+.post-details a:not(.nonstyle):hover {
+  box-shadow: 0 1px 0 #3a97ff;
+}
+.post-details .post-title {
+  margin-bottom: 10px;
+}
+.post-details .post-title h1 {
+  color: #222;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-block: 0;
+}
+.post-details .post-meta {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #999;
+}
+.post-details .post-content h1,
+.post-details .post-content h2,
+.post-details .post-content h3,
+.post-details .post-content h4,
+.post-details .post-content h5,
+.post-details .post-content h6 {
+  color: #222;
+  margin-block: 0;
+  margin-inline: 0;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  line-height: 1.2em;
+}
+.post-details .post-content h1 {
+  font-size: 1.4em;
+}
+.post-details .post-content h2 {
+  font-size: 1.3em;
+}
+.post-details .post-content h3 {
+  font-size: 1.2em;
+}
+.post-details .post-content h4 {
+  font-size: 1.1em;
+}
+.post-details .post-content h5 {
+  font-size: 1em;
+}
+.post-details .post-content h6 {
+  font-size: 0.9em;
+}
+.post-details .post-content p {
+  margin-block: 0;
+  line-height: 1.8em;
+}
+.post-details .post-content p:not(:last-child) {
+  margin: 0 0 10px;
+}
+.post-details .post-content img {
+  max-width: 100%;
+}
+.post-details .post-content blockquote {
+  margin-block: 0;
+  margin-inline: 0;
+  padding: 3px 10px;
+  background-color: #eee;
+  border-left: 7px solid #999;
+}
+.post-details .post-content blockquote>p {
+  margin: 0 0;
+}
+.post-details .post-content kbd {
+  padding: 1px 3px;
+  background-color: #eee;
+  box-shadow: 1px 2px #999;
+  border-radius: 3px;
+}
+.post-details .post-content mark,
+.post-details .post-content code:not(.hljs) {
+  padding: 1px 3px;
+  background-color: #eee;
+  border-radius: 3px;
+}
+.post-details .post-content table {
+  text-align: left;
+  border-collapse: collapse;
+}
+.post-details .post-content th,
+.post-details .post-content td {
+  padding: 5px;
+  border: 1px solid #eee;
+}
+.post-details .post-content tr:nth-child(even) {
+  background-color: #eee;
+}
+.post-details .post-content th {
+  font-weight: 400;
+  background-color: #ddd;
+}
+.post-details .post-content table {
+  margin: 1em 0;
+  width: 100%;
+}
+.katex > .katex-html {
+  white-space: normal;
+}
+.katex .base {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+}
+code.hljs {
+  padding: 3px 5px;
+}
+/*
+  Theme: GitHub Dark Dimmed
+  Description: Dark dimmed theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Colors taken from GitHub's CSS
+*/
+.hljs {
+  color: #adbac7;
+  background: #22272e;
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+/* prettylights-syntax-keyword */
+  color: #f47067;
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+/* prettylights-syntax-entity */
+  color: #dcbdfb;
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+/* prettylights-syntax-constant */
+  color: #6cb6ff;
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+/* prettylights-syntax-string */
+  color: #96d0ff;
+}
+.hljs-built_in,
+.hljs-symbol {
+/* prettylights-syntax-variable */
+  color: #f69d50;
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+/* prettylights-syntax-comment */
+  color: #768390;
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+/* prettylights-syntax-entity-tag */
+  color: #8ddb8c;
+}
+.hljs-subst {
+/* prettylights-syntax-storage-modifier-import */
+  color: #adbac7;
+}
+.hljs-section {
+/* prettylights-syntax-markup-heading */
+  color: #316dca;
+  font-weight: bold;
+}
+.hljs-bullet {
+/* prettylights-syntax-markup-list */
+  color: #eac55f;
+}
+.hljs-emphasis {
+/* prettylights-syntax-markup-italic */
+  color: #adbac7;
+  font-style: italic;
+}
+.hljs-strong {
+/* prettylights-syntax-markup-bold */
+  color: #adbac7;
+  font-weight: bold;
+}
+.hljs-addition {
+/* prettylights-syntax-markup-inserted */
+  color: #b4f1b4;
+  background-color: #1b4721;
+}
+.hljs-deletion {
+/* prettylights-syntax-markup-deleted */
+  color: #ffd8d3;
+  background-color: #78191b;
+}
+.utterances {
+  margin-top: 20px;
+}

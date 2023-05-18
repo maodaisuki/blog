@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>告白</title>
+  
+  
+  <link href="https://imakitto.github.io/blog/atom.xml" rel="self"/>
+  
+  <link href="https://imakitto.github.io/blog/"/>
+  <updated>2023-05-18T05:09:04.826Z</updated>
+  <id>https://imakitto.github.io/blog/</id>
+  
+  <author>
+    <name>mao</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://imakitto.github.io/blog/2023/04/29/2023-04-29/"/>
+    <id>https://imakitto.github.io/blog/2023/04/29/2023-04-29/</id>
+    <published>2023-04-29T00:00:00.000Z</published>
+    <updated>2023-05-18T05:09:04.826Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+</feed>
