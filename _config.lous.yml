@@ -22,7 +22,7 @@ katex:
 
 utterances:
   enable: true
-  repo: imakitto/blog
+  repo: maodaisuki/blog
   issueTerm: pathname
   theme: github-light
 
