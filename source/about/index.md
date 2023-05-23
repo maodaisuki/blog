@@ -5,4 +5,6 @@ sitemap: false
 
 🔨 本网站使用 [Hexo](https://hexo.io/) 生成，使用 [Lous](https://github.com/liuxiaotian/hexo-theme-lous) 主题，托管于 [GitHub Pages](https://pages.github.com/)。
 
-👇 下面有个留言板，可能需要等一会儿才能加载出来，随意留言~(伝言板は下に置いた。お気軽にコメントしてください)~
+👇 下面有个留言板，可能需要等一会儿才能加载出来
+
+✉ 随意留言 / お気軽にコメントしてください~
