@@ -7,6 +7,13 @@ a {
   text-decoration: none;
   color: #222;
 }
+.archive-post-title {
+  color: #000;
+  text-decoration: underline;
+}
+.archive-post-title:hover {
+  text-decoration: none;
+}
 .body-container {
   margin: 0 auto;
   max-width: 620px;
