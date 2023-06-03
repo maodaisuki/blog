@@ -4,12 +4,12 @@
 
 # Site
 title: 告白
-subtitle: 'maodasuki'
-description: "maodaisuki's blog"
-keywords:
+subtitle: ''
+description: ''
+keywords: 
 author: mao
 language: zh-CN
-timezone: 'UTC/GMT+08:00'
+timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
