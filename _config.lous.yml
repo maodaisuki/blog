@@ -1,9 +1,9 @@
 favicon: 
 
 menu:
-  主页: /
+  Home: /
 #  归档: archives
-  关于: about
+  About: about
   
 copyright:
   name: mao
