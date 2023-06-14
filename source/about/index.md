@@ -1,13 +1,9 @@
 ---
-title: 关于
-sitemap: false
+title: About
+sitemap: ture
 ---
 
-🔨 本网站使用 [Hexo](https://hexo.io/) 生成，使用 [Lous](https://github.com/liuxiaotian/hexo-theme-lous) 主题，托管于 [GitHub Pages](https://pages.github.com/)。
+<a href="https://mstdn.jp/@mao0_0">mao</a>です。猫じゃないです。誰も知らないネット民だけです。（中国在住の中国人）
 
-👇 下面有个留言板，可能需要等一会儿才能加载出来
-
-✉ 随意留言 / お気軽にコメントしてください~
-
-<span class="heimu" title="你知道的太多了">いつか突然更新しなくなったら、私はもう死んだはずだね</span>
+💬 👇お気軽にコメントしてください~
 
