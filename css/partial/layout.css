@@ -5,5 +5,5 @@
   flex-direction: column;
 }
 .body-container > div:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }

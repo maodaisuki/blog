@@ -55,10 +55,10 @@ body:not(.heimu_toggle_on) .new:hover .heimu.off {
   flex-direction: column;
 }
 .body-container > div:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .header-container {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
