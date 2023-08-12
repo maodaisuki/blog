@@ -33,6 +33,10 @@
        placeholder: 'comment...',   //占位符
     });
   </script> -->
+<script src="https://maodaisuki.github.io/blog/js/zoom.js"></script>
+<script src="https://maodaisuki.github.io/blog/js/bootstrap.min.js"></script>
+<script src="https://maodaisuki.github.io/blog/js/transition.js"></script>
+<script src="https://maodaisuki.github.io/blog/js/jquery.min.js"></script>
 <% if (theme.utterances && theme.utterances.enable && page.comments) { %>
 <script src="https://utteranc.es/client.js"
     repo="<%= theme.utterances.repo %>"
@@ -42,5 +46,4 @@
     async>
 </script>
 <% } %>
-<script src="https://maodaisuki.github.io/blog/js/zoom.js"></script>
 <%- partial('partial/scripts/math') %>
