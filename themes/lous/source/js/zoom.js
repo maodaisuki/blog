@@ -27,9 +27,11 @@
 
     if (this._$body.hasClass('zoom-overlay-open')) return
 
-    if (e.metaKey || e.ctrlKey) return window.open(e.target.src, '_blank')
+    if (e.metaKey || e.ctrlKey) {
+      return window.open((e.target.getAttribute('data-original') || e.target.src), '_blank')
+    }
 
-    if (target.width >= (window.innerWidth - Zoom.OFFSET)) return
+    if (target.width >= ($(window).width() - Zoom.OFFSET)) return
 
     this._activeZoomClose(true)
 
@@ -44,9 +46,18 @@
 
     // we use a capturing phase here to prevent unintended js events
     // sadly no useCapture in jquery api (http://bugs.jquery.com/ticket/14953)
-    document.addEventListener('click', this._boundClick, true)
+    if (document.addEventListener) {
+      document.addEventListener('click', this._boundClick, true)
+    } else {
+      document.attachEvent('onclick', this._boundClick, true)
+    }
 
-    e.stopPropagation()
+    if ('bubbles' in e) {
+      if (e.bubbles) e.stopPropagation()
+    } else {
+      // Internet Explorer before version 9
+      e.cancelBubble = true
+    }
   }
 
   ZoomService.prototype._activeZoomClose = function (forceDispose) {
@@ -67,8 +78,8 @@
   }
 
   ZoomService.prototype._scrollHandler = function (e) {
-    if (this._initialScrollPosition === null) this._initialScrollPosition = window.scrollY
-    var deltaY = this._initialScrollPosition - window.scrollY
+    if (this._initialScrollPosition === null) this._initialScrollPosition = $(window).scrollTop()
+    var deltaY = this._initialScrollPosition - $(window).scrollTop()
     if (Math.abs(deltaY) >= 40) this._activeZoomClose()
   }
 
@@ -77,8 +88,16 @@
   }
 
   ZoomService.prototype._clickHandler = function (e) {
-    e.stopPropagation()
-    e.preventDefault()
+    if (e.preventDefault) e.preventDefault()
+    else event.returnValue = false
+
+    if ('bubbles' in e) {
+      if (e.bubbles) e.stopPropagation()
+    } else {
+      // Internet Explorer before version 9
+      e.cancelBubble = true
+    }
+
     this._activeZoomClose()
   }
 
@@ -149,12 +168,12 @@
     var originalFullImageWidth  = this._fullWidth
     var originalFullImageHeight = this._fullHeight
 
-    var scrollTop = window.scrollY
+    var scrollTop = $(window).scrollTop()
 
     var maxScaleFactor = originalFullImageWidth / this._targetImage.width
 
-    var viewportHeight = (window.innerHeight - Zoom.OFFSET)
-    var viewportWidth  = (window.innerWidth - Zoom.OFFSET)
+    var viewportHeight = ($(window).height() - Zoom.OFFSET)
+    var viewportWidth  = ($(window).width() - Zoom.OFFSET)
 
     var imageAspectRatio    = originalFullImageWidth / originalFullImageHeight
     var viewportAspectRatio = viewportWidth / viewportHeight
@@ -176,8 +195,8 @@
     var imageOffset = $(this._targetImage).offset()
     var scrollTop   = $(window).scrollTop()
 
-    var viewportY = scrollTop + (window.innerHeight / 2)
-    var viewportX = (window.innerWidth / 2)
+    var viewportY = scrollTop + ($(window).height() / 2)
+    var viewportX = ($(window).width() / 2)
 
     var imageCenterY = imageOffset.top + (this._targetImage.height / 2)
     var imageCenterX = imageOffset.left + (this._targetImage.width / 2)
@@ -185,8 +204,26 @@
     this._translateY = viewportY - imageCenterY
     this._translateX = viewportX - imageCenterX
 
-    $(this._targetImage).css('transform', 'scale(' + this._imgScaleFactor + ')')
-    $(this._targetImageWrap).css('transform', 'translate(' + this._translateX + 'px, ' + this._translateY + 'px) translateZ(0)')
+    var targetTransform = 'scale(' + this._imgScaleFactor + ')'
+    var imageWrapTransform = 'translate(' + this._translateX + 'px, ' + this._translateY + 'px)'
+
+    if ($.support.transition) {
+      imageWrapTransform += ' translateZ(0)'
+    }
+
+    $(this._targetImage)
+      .css({
+        '-webkit-transform': targetTransform,
+            '-ms-transform': targetTransform,
+                'transform': targetTransform
+      })
+
+    $(this._targetImageWrap)
+      .css({
+        '-webkit-transform': imageWrapTransform,
+            '-ms-transform': imageWrapTransform,
+                'transform': imageWrapTransform
+      })
 
     this._$body.addClass('zoom-overlay-open')
   }
@@ -197,8 +234,23 @@
       .addClass('zoom-overlay-transitioning')
 
     // we use setStyle here so that the correct vender prefix for transform is used
-    $(this._targetImage).css('transform', '')
-    $(this._targetImageWrap).css('transform', '')
+    $(this._targetImage)
+      .css({
+        '-webkit-transform': '',
+            '-ms-transform': '',
+                'transform': ''
+      })
+
+    $(this._targetImageWrap)
+      .css({
+        '-webkit-transform': '',
+            '-ms-transform': '',
+                'transform': ''
+      })
+
+    if (!$.support.transition) {
+      return this.dispose()
+    }
 
     $(this._targetImage)
       .one($.support.transition.end, $.proxy(this.dispose, this))
