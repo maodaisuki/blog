@@ -3,19 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 告白
-subtitle: ''
+title: Blog
+subtitle: 'maoblog'
 description: ''
-keywords: 
-author: mao
-language: zh-CN
+keywords:
+author: John Doe
+language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://maodaisuki.github.io/blog
-permalink: :title/
-# :year/:month/:day/
+url: http://maodaisuki.github.io/hexo-theme-maoblog
+permalink: :year/:month/:post_title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -45,17 +44,16 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: false
   auto_detect: false
-  tab_replace: ''
-  wrap: false
-  hljs: true
+  tab_replace: false
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
   line_number: true
   tab_replace: ''
+
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -63,7 +61,7 @@ prismjs:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 100
+  per_page: 0
   order_by: -date
 
 # Category & Tag
@@ -98,14 +96,16 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: lous
+theme: maoblog
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: https://github.com/maodaisuki/blog.git
-  branch: master
+  repo: https://github.com/maodaisuki/hexo-theme-maoblog
+  branch: gh-pages
+
+# Feed Atom
 feed:
   type: atom
   path: atom.xml
