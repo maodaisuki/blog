@@ -1,0 +1,4 @@
+[submodule "themes/hexo-theme-maoblog"]
+	path = themes/maoblog
+	url = https://github.com/maodaisuki/hexo-theme-maoblog.git
+	branch = theme
