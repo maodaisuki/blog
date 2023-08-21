@@ -1,0 +1,34 @@
+<main>
+  <div class="main-container">
+      <div class="post-details">
+          <% if (is_post()) { %>
+          <div class="post-title">
+              <h1><%= page.title %></h1>
+          </div>
+          <div class="post-meta">
+              <!-- <i class="fa fa-calendar"></i>&nbsp;&nbsp;<span class="post-date"><%= date(page.date, 'YYYY/MM/DD') %></span> -->
+          </div>
+          <% } %>
+          <div class="post-content">
+              <%- page.content %>
+          </div>
+      </div>
+  </div>
+</main>
+<% if (theme.utterances && theme.utterances.enable && page.comments) { %>
+<script src="<%= theme.utterances.cdn %>"
+  repo="<%= theme.utterances.repo %>"
+  issue-term="<%= theme.utterances.issueTerm %>"
+  theme="<%= theme.utterances.theme %>"
+  crossorigin="anonymous"
+  async>
+</script>
+<% } %>
+<% if (theme.mermaid.enable) { %>
+  <%- js('/js/mermaid.min.js') %>
+<% } %>
+<%- js('/js/zoom/jquery.min.js') %>
+<%- js('/js/zoom/bootstrap.min.js') %>
+<%- js('/js/zoom/zoom.js') %>
+<%- js('/js/maoblog.js') %>
+<%- js('/js/prism.js') %>
