@@ -4,7 +4,10 @@ language: en
 # main menu navigation
 menu:
   Posts: /
-  Tags: /tags
+# 修复 Tags 详情页显示不全
+#  Tags: /tags
+# 添加 Search 按钮
+#  Search: /
   About: /about
 #  Contact: /contact
 #  Archives: /archives
