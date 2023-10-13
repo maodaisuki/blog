@@ -7,7 +7,7 @@ menu:
 # 修复 Tags 详情页显示不全
 #  Tags: /tags
 # 添加 Search 按钮
-#  Search: /
+ Search: 
   About: /about
 #  Contact: /contact
 #  Archives: /archives
@@ -39,3 +39,8 @@ mathjax:
 mermaid: ## mermaid url https://github.com/knsv/mermaid
   enable: true
   theme: default
+  
+search:
+  path: search.xml
+  field: post
+  content: true
