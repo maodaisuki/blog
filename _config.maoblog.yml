@@ -4,13 +4,9 @@ language: en
 # main menu navigation
 menu:
   Posts: /
-
   Tags: /tags
-# 添加 Search 按钮
   Search: 
   About: /about
-#  Contact: /contact
-#  Archives: /archives
 
 copyright:
   name: mao
@@ -18,7 +14,6 @@ copyright:
 license:
   name: CC-BY-NC-SA 4.0
   url: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
 
 # writing
 untitled:
