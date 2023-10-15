@@ -22,18 +22,15 @@ untitled:
 rss:
   path: atom.xml
 
-utterances:
-  enable: true
-  repo: maodaisuki/blog
-  issueTerm: pathname
-  theme: github-light
-
 mathjax:
   enable: true
 
 mermaid: ## mermaid url https://github.com/knsv/mermaid
   enable: true
   theme: default
+
+giscus:
+  enable: true
   
 search:
   path: search.xml
