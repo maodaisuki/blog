@@ -28,7 +28,7 @@ body
   // TODO 谷歌字体
   font-family: "Montserrat", "SF UI Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", "Helvetica Neue", Helvetica, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif
   font-size: 16px
-  font-weight: 400
+  font-weight: normal
   background: var(--bg)
   line-height: 1.75
 
@@ -47,7 +47,7 @@ body
 .body-main
   background: var(--paper)
   min-height: 700px
-  width: 90%
+  width: 87%
   margin: 0 auto
 
 a
@@ -92,14 +92,20 @@ ul
   margin-right: 0
 
 .nav li a
-  color: var(--font-color-1)
-  opacity: .6
-  transition: opacity ease-in-out .5s
+{
+    color: var(--font-color-1);
+    opacity: .6;
+    transition: opacity ease-in-out .5s;
+}
 
 .nav li a:hover
-  opacity: 1
-  transition: opacity ease-in-out .5s
+{
+    opacity: 1;
+    transition: opacity ease-in-out .5s;
+}
 
+// .site-mode
+//   margin-left: auto
 .main-wrapper
   min-height: 80vh
 
