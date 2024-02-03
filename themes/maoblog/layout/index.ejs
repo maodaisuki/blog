@@ -2,6 +2,7 @@
   <ul class="archive">
       <% page.posts.each(function (post) { %>
       <li>
+          <span class="archive-date"><%= date(post.date, "YYYY.MM.DD") %></span>
           <div class="archive-main">
                 <% if (String(post.title) == "") { %>
                     <a class="archive-title" href="<%- url_for(post.path) %>"><%= theme.untitled.name %></a>
@@ -10,7 +11,6 @@
                 <% }%>
               <!-- <a class="read-more" href="<%- url_for(post.path) %>"> ... </a> -->
           </div>
-          <span class="archive-date"><%= date(post.date, "YYYY.MM.DD") %></span>
       </li>
       <% }) %>
   </ul>
