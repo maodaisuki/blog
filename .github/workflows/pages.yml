@@ -24,9 +24,7 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
-        run: | 
-          npm install
-          npm install hexo-render-swig
+        run: npm install
       - name: Build
         run: npm run build
       - name: Deploy
