@@ -1,21 +1,22 @@
-name: Pages
+name: GitHub Pages
 
 on:
   push:
-    branches:
-      - main # default branch
+   branches:
+    - main
 
 jobs:
-  pages:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 18.x
-        uses: actions/setup-node@v2
+      - name: Checkout branch
+        uses: actions/checkout@master
         with:
-          node-version: "18"
+          ref: demo-source
+      - name: Use Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: '18.x'
       - name: Cache NPM dependencies
         uses: actions/cache@v2
         with:
@@ -23,12 +24,31 @@ jobs:
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
+      - name: Prepare source
+        run: |
+          npm install hexo-renderer-ejs hexo-renderer-dartsass --save
+          git clone -b master https://github.com/ahonn/hexo-theme-even.git themes/even
+          cp themes/even/_config.yml.example themes/even/_config.yml
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        run: |
+          npm i -g hexo-cli
+          hexo generate
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          path: ./public
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
