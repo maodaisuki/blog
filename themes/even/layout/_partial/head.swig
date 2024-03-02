@@ -20,16 +20,16 @@
 
 {# Fancybox styling #}
 {% if theme.fancybox %}
-  <link rel="stylesheet" type="text/css" href="{{ url_for('lib/fancybox/jquery.fancybox.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('blog/lib/fancybox/jquery.fancybox.css') }}" />
 {% endif %}
 
 {# Nprogress styling #}
 {% if theme.pjax %}
-  <link rel="stylesheet" type="text/css" href="{{ url_for('lib/nprogress/nprogress.min.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('blog/lib/nprogress/nprogress.min.css') }}" />
 {% endif %}
 
 {# Theme styling #}
-<link rel="stylesheet" type="text/css" href="{{ url_for('css/style.css') }}?v={{ theme.version }}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('blog/css/style.css') }}?v={{ theme.version }}" />
 
 {# Analytics and push #}
 {% if not env.debug %}
