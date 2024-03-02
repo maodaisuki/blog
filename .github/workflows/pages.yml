@@ -25,8 +25,8 @@ jobs:
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: | 
-          npm install hexo-render-swig
           npm install
+          npm install hexo-render-swig
       - name: Build
         run: npm run build
       - name: Deploy
