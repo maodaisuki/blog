@@ -41,7 +41,7 @@ theme = "hugo-blog-awesome"
   description = "Complete technical works and social posts of alpinist, software engineer, and computer scientist Kris Nóva. Compute runtime, Linux, Aurae, Kubernetes, Security, and Kernel topics. Distributed systems. Cyber Security. Analysis. Math."
 
 [params.author]
-  avatar = "img/nova.jpg"
-  intro = "Kris Nóva"
-  name = "Kris Nóva"
-  description = "Complete Technical Works"
+  avatar = "img/avator.jpg"
+  intro = "mao"
+  name = "mao"
+  description = "Play with song."
