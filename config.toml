@@ -1,5 +1,5 @@
 title = "Blog"
-baseURL = 'https://nyanpasu.space/blog'
+baseURL = 'https://nyanpasu.space/'
 languageCode = 'en-us'
 theme = "hugo-blog-awesome"
 
