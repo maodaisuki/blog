@@ -1,3 +1,0 @@
----
-title: "Smaller, Social Posts"
----
