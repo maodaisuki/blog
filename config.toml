@@ -1,5 +1,5 @@
-title = "Awesome Hugo blog"
-baseURL = 'https://hba.sid.one/'
+title = "Blog"
+baseURL = 'https://nyanpasu.space/blog/'
 
 # This is what goes in <html lang="">
 languageCode = 'en-us'
