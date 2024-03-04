@@ -1,6 +1,6 @@
 title = "Blog"
-baseURL = 'https://nyanpasu.space/blog/'
-
+baseURL = 'https://maodaisuki.github.io/blog/'
+timeout = "10m"
 # This is what goes in <html lang="">
 languageCode = 'en-us'
 
