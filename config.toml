@@ -1,6 +1,8 @@
 title = "Blog"
 baseURL = 'https://maodaisuki.github.io/blog/'
 timeout = "10m"
+relativeURLs = true
+canonifyURLs = true
 # This is what goes in <html lang="">
 languageCode = 'en-us'
 

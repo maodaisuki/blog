@@ -19,7 +19,7 @@ Hugo viene distribuito con alcuni [Shortcode integrati](https://gohugo.io/conten
 
 ## Semplice Shortcode Per Twitter
 
-{{< twitter_simple DesignReviewed 1085870671291310081 >}}
+
 
 <br>
 
@@ -27,4 +27,4 @@ Hugo viene distribuito con alcuni [Shortcode integrati](https://gohugo.io/conten
 
 ## Semplice Shortcode Per Vimeo
 
-{{< vimeo_simple 48912912 >}}
+
