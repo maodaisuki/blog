@@ -1,3 +1,3 @@
 .idea*
-.hugo.exe
+hugo.exe
 .hugo_build.lock
