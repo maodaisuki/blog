@@ -8,18 +8,6 @@ tags: ["さようならの話"]
 
 絵の練習してたら、ブログ更新する時間もなくなっちゃう。マジで絵を学び始めたから、ペンタブレットも買った。それで、自分でアイコン描いてみた。
 
-<center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="https://maodaisuki.github.io/blog/images/posts/ICON.png" data-action="zoom">
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">最近描いたアイコン</div>
-</center>
-
-
 なんだか面白いな。昔も絵の描き方学びたいけど、ちゃんと学んだことがないよね。
 
 実は、もう夏休みに入っている。けど、実習の時間を待ってるために、まだ学校でいる。今日は 6 月の最後の一日だから、ちょっとブログ更新したいね。それで、かきかき。

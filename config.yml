@@ -2,6 +2,7 @@
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "https://nyanpasu.space/blog/"
 title: Blog
+name: Blog
 paginate: 20
 theme: PaperMod
 ignoreErrors: ["error-remote-getjson"]
@@ -56,7 +57,7 @@ params:
   description: "Blog"
   author: mao
   # author: ["Me", "You"] # multiple authors
-
+  SiteName: 告白
   defaultTheme: auto
   # disableThemeToggle: true
   ShowShareButtons: false

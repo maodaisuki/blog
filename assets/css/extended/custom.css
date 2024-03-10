@@ -40,11 +40,27 @@ body {
     font-size: 1.5em;
 }
 
-.paginav .next {
-    padding-bottom: 10px;
-}
-
 .giscus {
     margin-top: 20px;
 }
 
+.paginav {
+    margin-bottom: 10px;
+}
+
+.paginav a {
+    padding-block-start: 5px;
+    padding-block-end: 10px;
+}
+
+.paginav .prev {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.paginav .next {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

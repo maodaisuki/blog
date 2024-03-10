@@ -265,12 +265,13 @@
 }
 
 .toc details summary {
-    cursor: zoom-in;
+    /* cursor: zoom-in; */
+    cursor: pointer;
     margin-inline-start: 20px;
 }
 
 .toc details[open] summary {
-    cursor: zoom-out;
+    /* cursor: zoom-out; */
 }
 
 .toc .details {
