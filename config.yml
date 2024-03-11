@@ -43,7 +43,7 @@ languages:
           url: tags/
           weight: 40
         - name: RSS
-          url: http://nyanpasu.space/blog/index.xml/
+          url: http://nyanpasu.space/blog/index.xml
 
 
 outputs:
