@@ -1,8 +1,9 @@
 {{- define "main" }}
-
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 <header class="page-header">
   <h1>
     {{ .Title }}
+    <sup class="archive-count">&nbsp;&nbsp;{{ len $pages }}</sup>
     {{- if (.Param "ShowRssButtonInSectionTermList") }}
     {{- $rss := (.OutputFormats.Get "rss") }}
     {{- if (eq .Kind `page`) }}
@@ -27,48 +28,28 @@
   {{- end }}
 </header>
 
-{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-
 {{- if site.Params.ShowAllPagesInArchive }}
 {{- $pages = site.RegularPages }}
 {{- end }}
 
-{{- range $pages.GroupByPublishDate "2006" }}
-{{- if ne .Key "0001" }}
-<div class="archive-year">
-  <h2 class="archive-year-header">
-    {{- replace .Key "0001" "" }}<sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}</sup>
-  </h2>
-  {{- range .Pages.GroupByDate "January" }}
-  <div class="archive-month">
-    <h3 class="archive-month-header">{{- .Key }}<sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}</sup></h3>
-    <div class="archive-posts">
-      {{- range .Pages }}
-      {{- if eq .Kind "page" }}
-      <div class="archive-entry">
-        <h3 class="archive-entry-title entry-hint-parent">
-          {{- .Title | markdownify }}
-          {{- if .Draft }}
-          <span class="entry-hint" title="Draft">
-            <svg xmlns="http://www.w3.org/2000/svg" height="15" viewBox="0 -960 960 960" fill="currentColor">
-              <path
-                d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-            </svg>
-          </span>
-          {{- end }}
-        </h3>
-        <div class="archive-meta">
-          {{- partial "post_meta.html" . -}}
-        </div>
-        <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
-      </div>
-      {{- end }}
-      {{- end }}
-    </div>
+{{ range ($pages.GroupByDate "2006") }}
+  <div class="collection-title">
+    <h2 class="archive-year">{{ .Key }}<sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}</sup></h2>
   </div>
-  {{- end }}
-</div>
-{{- end }}
-{{- end }}
 
+  <ul class="archive-list">
+    {{ range .Pages }}
+      <div class="archive-post">
+       <span class="archive-post-title">
+         <a href="{{ .RelPermalink }}" class="archive-post-link">
+           {{ .Title }}
+          </a>
+       </span>
+       <span class="archive-post-time">
+          {{ .PublishDate.Format "01-02" }}
+        </span>
+      </div>
+    {{ end }}
+  </ul>
+{{- end }}
 {{- end }}{{/* end main */}}

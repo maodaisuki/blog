@@ -13,7 +13,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-# mainsections: ["posts", "essay", "fiction", "yume", "sayounara"]
+mainsections: ["posts"]
 # googleAnalytics: UA-123-45
 
 minify:
@@ -68,9 +68,10 @@ params:
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
-  ShowAllPagesInArchive: true
+  ShowAllPagesInArchive: false
   ShowPageNums: true
   ShowToc: true
+  hideAuthor: true
   # comments: false
   images: ["images/papermod-cover.png"]
 

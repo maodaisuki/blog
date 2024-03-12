@@ -68,3 +68,19 @@ body {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+.collection-title {
+    margin-bottom: 10px;
+}
+
+.archive-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.archive-post-time {
+    text-align: right;
+    color: var(--secondary);
+}
