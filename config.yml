@@ -42,6 +42,9 @@ languages:
         - name: Tags
           url: tags/
           weight: 40
+        # - name: Memos
+        #   url: memos/
+        #   weight: 50
         - name: RSS
           url: http://nyanpasu.space/blog/index.xml
 

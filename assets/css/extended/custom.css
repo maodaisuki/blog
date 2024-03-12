@@ -90,3 +90,69 @@ body {
     white-space: nowrap;
     color: var(--secondary);
 }
+
+.pulldown-menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.pulldown-menu-toggle svg {
+    display: block;
+    margin: auto;
+}
+
+.pulldown-menu-toggle:hover {
+    cursor: pointer;
+}
+
+.pulldown-menu {
+    display: none;
+    flex-basis: 100%;
+}
+
+.pulldown-menu-list {
+    list-style-type: none;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); 
+}
+
+.pulldown-menu-list li a div {
+    display: flex;
+    padding-left: var(--gap);
+    justify-content: space-between;
+}
+
+.pulldown-menu-list li a div div {
+    display: flex;
+    margin: auto var(--gap);
+    align-items: center;
+}
+
+.pulldown-menu-list li:hover {
+    background: var(--border);
+}
+
+.show {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #menu {
+        display: none;
+    }
+
+    .show {
+        display: inline-block !important;
+        /* 背景虚化 */
+    }
+
+    .blur {
+        filter: blur(2px);
+    }
+
+    .pulldown-menu-toggle {
+        display: flex;
+        margin: auto var(--gap);
+    }
+}

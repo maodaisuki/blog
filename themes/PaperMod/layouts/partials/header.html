@@ -145,5 +145,36 @@
             </li>
             {{- end }}
         </ul>
+        <div class="pulldown-menu-toggle" onclick="switchPulldownMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </div>
+        <div class="pulldown-menu">
+            <ul class="pulldown-menu-list ">
+                {{- range site.Menus.main }}
+                {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+                {{- $page_url:= $currentPage.Permalink | absLangURL }}
+                {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
+                <li>
+                    <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
+                    {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
+                        <div>
+                            <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
+                                {{- .Pre }}
+                                {{- .Name -}}
+                                {{ .Post -}}
+                            </span>
+                            <div>
+                                {{- if (findRE "://" .URL) }}&nbsp;
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                {{- else }}
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                {{- end }}
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {{- end }}
+            </ul>
+        </div>
     </nav>
 </header>
