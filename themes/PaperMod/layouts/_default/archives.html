@@ -46,7 +46,7 @@
           </a>
        </span>
        <span class="archive-post-time">
-          {{ .PublishDate.Format "01-02" }}
+          {{ .PublishDate.Format (default "January 2, 2006" site.Params.DateFormat) }}
         </span>
       </div>
     {{ end }}

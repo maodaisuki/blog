@@ -80,7 +80,13 @@ body {
     margin: 5px 0;
 }
 
+.archive-post-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .archive-post-time {
     text-align: right;
+    white-space: nowrap;
     color: var(--secondary);
 }
