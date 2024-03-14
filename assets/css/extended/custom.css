@@ -137,9 +137,16 @@ body {
     display: none;
 }
 
+.footer-LF {
+    display: none;
+}
+
 @media screen and (max-width: 600px) {
     #menu {
         display: none;
+    }
+    .footer-LF {
+        display: inline;
     }
 
     .show {
