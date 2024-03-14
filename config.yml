@@ -31,10 +31,10 @@ languages:
     menu:
       main:
         - name: Home
-          url: 
+          url: /blog/
           weight: 10
         - name: Archive
-          url: archives
+          url: archives/
           weight: 20
         - name: Search
           url: search/
