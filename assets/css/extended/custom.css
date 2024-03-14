@@ -144,9 +144,8 @@ body {
 
     .show {
         display: inline-block !important;
-        /* 背景虚化 */
     }
-
+    /* 背景虚化 */
     .blur {
         filter: blur(2px);
     }
