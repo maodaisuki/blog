@@ -31,7 +31,7 @@ languages:
     menu:
       main:
         - name: Home
-          url: /blog/
+          url: /
           weight: 10
         - name: Archive
           url: archives/
