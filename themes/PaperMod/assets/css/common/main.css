@@ -19,7 +19,7 @@
     font-size: 13px;
     line-height: 36px;
     background: var(--primary);
-    border-radius: calc(36px / 2);
+    border-radius: 5px;
     padding: 0 16px;
 }
 
@@ -53,7 +53,7 @@ pre {
     top: 4px;
     right: 4px;
     color: rgba(255, 255, 255, 0.8);
-    background: rgba(78, 78, 78, 0.8);
+    background: var(--code-block-bg);
     border-radius: var(--radius);
     padding: 0 5px;
     font-size: 14px;

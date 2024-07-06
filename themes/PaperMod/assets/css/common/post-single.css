@@ -1,6 +1,6 @@
 .page-header,
 .post-header {
-    margin: 24px auto var(--content-gap) auto;
+    margin: 10px auto var(--content-gap) auto;
 }
 
 .post-title {
@@ -211,8 +211,14 @@
 
 .post-content blockquote {
     margin: 20px 0;
-    padding: 0 14px;
-    border-inline-start: 3px solid var(--primary);
+    padding: 10px 14px;
+    border-radius: 4px;
+    background-color: var(--code-bg);
+    border-inline-start: 5px solid var(--primary);
+}
+
+.post-content blockquote p {
+    margin-bottom: 0;
 }
 
 .post-content hr {
