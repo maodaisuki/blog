@@ -14,6 +14,7 @@ buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
 mainsections: ["posts"]
+tootsections: ["toots"]
 # googleAnalytics: UA-123-45
 
 minify:
@@ -42,9 +43,6 @@ languages:
         - name: Tags
           url: tags/
           weight: 40
-        # - name: Memos
-        #   url: memos/
-        #   weight: 50
         - name: RSS
           url: http://nyanpasu.space/blog/index.xml
 

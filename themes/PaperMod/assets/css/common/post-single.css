@@ -259,7 +259,7 @@
 }
 
 .toc {
-    margin: 0 2px 40px 2px;
+    margin: 0 2px 20px 2px;
     border: 1px solid var(--border);
     background: var(--code-bg);
     border-radius: var(--radius);
@@ -273,7 +273,9 @@
 .toc details summary {
     /* cursor: zoom-in; */
     cursor: pointer;
-    margin-inline-start: 20px;
+    margin-inline-start: 10px;
+    font-weight: lighter;
+    font-size: 16px;
 }
 
 .toc details[open] summary {
@@ -282,12 +284,21 @@
 
 .toc .details {
     display: inline;
-    font-weight: 500;
+    font-weight: lighter;
 }
 
 .toc .inner {
     margin: 0 20px;
-    padding: 10px 20px;
+    padding: 10px 20px 5px 20px;
+}
+
+.toc .inner ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.toc .inner ul li a {
+    color: #4f8fff;
 }
 
 .toc li ul {
