@@ -65,7 +65,7 @@
 .entry-content {
     margin: 8px 0;
     /* color: var(--secondary); */
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 500;
     line-height: 1.7rem;
     overflow: hidden;
@@ -81,7 +81,7 @@
 
 .entry-hr {
     border: none;
-    border-top: 1px solid var(--hr);
+    border-top: 1px dashed var(--hr);
     width: 100%;
     margin-top: 30px;
 }
