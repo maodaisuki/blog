@@ -1,4 +1,4 @@
-.terms-tags li {
+/* .terms-tags li {
     display: inline-block;
     margin: 10px;
     font-weight: 500;
@@ -15,4 +15,30 @@
 .terms-tags a:active {
     background: var(--tertiary);
     transform: scale(0.96);
+} */
+
+.terms-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.terms-tags li {
+    display: inline-block;
+    font-weight: 600;
+}
+
+.terms-tags a {
+    display: block;
+    padding: 0 14px;
+    color: var(--secondary);
+    font-size: 14px;
+    line-height: 34px;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.terms-tags a:hover {
+    background: var(--border);
 }
