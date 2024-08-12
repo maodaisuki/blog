@@ -225,3 +225,7 @@ img.zoom-img {
 .zoom-overlay-transitioning {
     cursor: default;
 }
+
+.cell-editor {
+    box-shadow: none !important;
+}
