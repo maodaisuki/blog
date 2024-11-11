@@ -14,7 +14,6 @@ buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
 mainsections: ["posts"]
-tootsections: ["toots"]
 # googleAnalytics: UA-123-45
 
 minify:
@@ -55,7 +54,7 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Blog"
+  description: "maodaisuki 的博客"
   author: mao
   # author: ["Me", "You"] # multiple authors
   SiteName: 告白
