@@ -94,6 +94,10 @@
     margin-bottom: var(--content-gap);
 }
 
+.post-content p {
+    text-indent: 2em;
+}
+
 .post-content ol,
 .post-content ul {
     padding-inline-start: 20px;

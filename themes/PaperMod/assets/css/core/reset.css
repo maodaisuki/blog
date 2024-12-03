@@ -40,8 +40,8 @@ header,
 hgroup,
 main,
 nav,
-section,
-table {
+section {
+/* table { */
     display: block;
 }
 
